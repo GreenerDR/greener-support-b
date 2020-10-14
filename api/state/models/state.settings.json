@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "states",
+  "info": {
+    "name": "state"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "state": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "tickets": {
+      "via": "ticketState",
+      "collection": "ticket"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tickets",
+  "info": {
+    "name": "ticket",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "ticketUID": {
+      "type": "uid"
+    },
+    "response": {
+      "type": "text"
+    },
+    "ticketState": {
+      "model": "state",
+      "via": "tickets"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "tickets"
+    }
+  }
+}
