@@ -1,3 +1,3 @@
-# Strapi application
+# Greener support backend
 
-A quick description of your strapi application
+Backend application for the Greener support web app.
